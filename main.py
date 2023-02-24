@@ -10,7 +10,7 @@ db = SqliteDatabase(path.join(connection, "keith.db"))
 
 class User(Model):
     name = CharField()
-    email = CharField()
+    email = CharField(unique=True)
     password = CharField()
 
     class Meta:
